@@ -1,0 +1,183 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+
+  /* CSS Variables for Dark Mode (Default) */
+  --bg-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --primary-color: #646cff;
+  --hover-color: #535bf2;
+
+  --left-panel-bg: #000000;
+  --code-bg: #0c0c0c;
+  --right-panel-bg: #343434;
+  --review-btn-bg: rgb(219, 219, 255);
+  --review-btn-text: #000000;
+  --border-color: #ddd;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light Mode Overrides */
+.light-mode {
+  color-scheme: light;
+  --bg-color: #ffffff;
+  --text-color: #213547;
+  --primary-color: #646cff;
+  --hover-color: #747bff;
+
+  --left-panel-bg: #f8f8f8;
+  --code-bg: #ffffff;
+  --right-panel-bg: #f3f3f3;
+  --review-btn-bg: #646cff;
+  --review-btn-text: #ffffff;
+  --border-color: #ccc;
+}
+
+/* Force dark text for code editors and outputs in Light Mode */
+.light-mode .code code[class*="language-"],
+.light-mode .code pre[class*="language-"],
+.light-mode .code textarea,
+.light-mode .right pre code.hljs {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* PrismJS Light Mode Token Overrides (To make "Tomorrow Night" tokens readable on white) */
+.light-mode .token.comment,
+.light-mode .token.prolog,
+.light-mode .token.doctype,
+.light-mode .token.cdata {
+  color: #7ca668 !important;
+}
+
+.light-mode .token.punctuation {
+  color: #333 !important;
+}
+
+.light-mode .token.property,
+.light-mode .token.tag,
+.light-mode .token.boolean,
+.light-mode .token.number,
+.light-mode .token.constant,
+.light-mode .token.symbol,
+.light-mode .token.deleted {
+  color: #d91e18 !important;
+}
+
+.light-mode .token.selector,
+.light-mode .token.attr-name,
+.light-mode .token.string,
+.light-mode .token.char,
+.light-mode .token.builtin,
+.light-mode .token.inserted {
+  color: #27ae60 !important;
+}
+
+.light-mode .token.operator,
+.light-mode .token.entity,
+.light-mode .token.url,
+.light-mode .language-css .token.string,
+.light-mode .style .token.string {
+  color: #9a6e3a !important;
+}
+
+.light-mode .token.atrule,
+.light-mode .token.attr-value,
+.light-mode .token.keyword {
+  color: #2980b9 !important;
+}
+
+.light-mode .token.function,
+.light-mode .token.class-name {
+  color: #c0392b !important;
+}
+
+.light-mode .token.regex,
+.light-mode .token.important,
+.light-mode .token.variable {
+  color: #e67e22 !important;
+}
+
+/* Highlight.js Light Mode Overrides */
+.light-mode .hljs-comment,
+.light-mode .hljs-quote {
+  color: #008000 !important;
+}
+
+.light-mode .hljs-keyword,
+.light-mode .hljs-selector-tag,
+.light-mode .hljs-literal,
+.light-mode .hljs-section,
+.light-mode .hljs-link {
+  color: #000080 !important;
+}
+
+.light-mode .hljs-string,
+.light-mode .hljs-title,
+.light-mode .hljs-name,
+.light-mode .hljs-type,
+.light-mode .hljs-attribute,
+.light-mode .hljs-symbol,
+.light-mode .hljs-bullet,
+.light-mode .hljs-addition,
+.light-mode .hljs-variable,
+.light-mode .hljs-template-tag,
+.light-mode .hljs-template-variable {
+  color: #a31515 !important;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--primary-color);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Remove the media query since we are controlling it manually */
